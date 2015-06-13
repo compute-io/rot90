@@ -32,10 +32,14 @@
     "linear",
     "algebra",
     "rotate",
+    "rot90",
     "transform",
     "reshape",
     "matrix",
     "matrices",
+    "flip",
+    "fliplr",
+    "flipud",
     "dstructs"
   ],
   "bugs": {
