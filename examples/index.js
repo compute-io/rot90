@@ -13,7 +13,7 @@ var nRows = 3,
 mat = matrix( [nRows,nCols], 'int32' );
 for ( i = 0; i < nRows; i++ ) {
 	for ( j = 0; j < nCols; j++ ) {
-		mat.set( i, j, i*nRows + j );
+		mat.set( i, j, i*nCols + j );
 	}
 }
 /*
@@ -21,6 +21,7 @@ for ( i = 0; i < nRows; i++ ) {
 	  2 3
 	  4 5 ]
 */
+console.log( 'mat: %s', mat.toString() );
 
 // Rotate the matrix 90 degrees...
 out = rot90( mat );
@@ -28,7 +29,7 @@ out = rot90( mat );
 	[ 1 3 5
 	  0 2 4 ]
 */
-console.log( out.toString() );
+console.log( 'k=1: %s', out.toString() );
 
 // Rotate the matrix 180 degrees...
 out = rot90( mat, {
@@ -39,7 +40,7 @@ out = rot90( mat, {
 	  3 2
 	  1 0 ]
 */
-console.log( out.toString() );
+console.log( 'k=2: %s', out.toString() );
 
 // Rotate the matrix 270 degrees...
 out = rot90( mat, {
@@ -49,7 +50,7 @@ out = rot90( mat, {
 	[ 4 2 0
 	  5 3 1 ]
 */
-console.log( out.toString() );
+console.log( 'k=3: %s', out.toString() );
 
 // Rotate the matrix 360 degrees...
 out = rot90( mat, {
@@ -60,7 +61,7 @@ out = rot90( mat, {
 	  2 3
 	  4 5 ]
 */
-console.log( out.toString() );
+console.log( 'k=4: %s', out.toString() );
 
 // Rotate the matrix -90 (equiv to +270) degrees...
 out = rot90( mat, {
@@ -70,7 +71,7 @@ out = rot90( mat, {
 	[ 4 2 0
 	  5 3 1 ]
 */
-console.log( out.toString() );
+console.log( 'k=-1: %s', out.toString() );
 
 // Rotate the matrix -180 (equiv to +180) degrees and mutate...
 out = rot90( mat, {
@@ -82,5 +83,5 @@ out = rot90( mat, {
 	  3 2
 	  1 0 ]
 */
-console.log( out.toString() );
+console.log( 'k=-2: %s', out.toString() );
 console.log( 'Mutated: ', out === mat );

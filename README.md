@@ -17,10 +17,10 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'compute-rot90' );
+var rot90 = require( 'compute-rot90' );
 ```
 
-#### rot90( matrix[, options] )
+#### rot90( x[, opts] )
 
 Rotates a [`matrix`](https://github.com/dstructs/matrix) by `90` degrees in the __counterclockwise__ direction.
 
@@ -62,7 +62,7 @@ var out = rot90( mat, {
 */
 ```
 
-`k` may also be negative and thus rotate the [`matrix`](https://github.com/dstructs/matrix) in a __clockwise__ direction.
+`k` may also be negative and thus specify that the [`matrix`](https://github.com/dstructs/matrix) be rotated in a __clockwise__ direction.
 
 ``` javascript
 var out = rot90( mat, {
@@ -106,7 +106,7 @@ var nRows = 3,
 mat = matrix( [nRows,nCols], 'int32' );
 for ( i = 0; i < nRows; i++ ) {
 	for ( j = 0; j < nCols; j++ ) {
-		mat.set( i, j, i*nRows + j );
+		mat.set( i, j, i*nCols + j );
 	}
 }
 /*
