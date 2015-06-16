@@ -1,6 +1,6 @@
 {
   "name": "compute-rot90",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Rotates a matrix by 90 degrees.",
   "author": {
     "name": "Athan Reines",
